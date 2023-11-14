@@ -1,0 +1,24 @@
+#server:
+#  port : 8080
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true
+
+request:
+  daemon:
+    url: http://kdaemon-srv/kdaemon/dod
+#    url: http://localhost:8080/kdaemon/dod
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: TRACE
+
